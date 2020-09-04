@@ -1,3 +1,9 @@
+package circus;
+
+import circus.animals.Animal;
+import circus.animals.Bird;
+import circus.animals.Duck;
+
 public class Trainer {
     public static void main(String[] args) {
         Duck d = new Duck();
@@ -11,8 +17,18 @@ public class Trainer {
 
         Duck d2 = (Duck) a; // downcasting
         train(new Duck());
-        // train(new Parrot());
-        Animal a2 = new Animal();
+        // train(new circus.animals.Parrot());
+        Animal a2 = new Animal() {
+            @Override
+            public int getValue() {
+                return 0;
+            }
+
+            @Override
+            public String speak() {
+                return null;
+            }
+        };
         Bird b2 = new Bird();
     }
 
