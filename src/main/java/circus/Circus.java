@@ -9,6 +9,10 @@ import circus.stuff.Equipment;
 import circus.stuff.Ladder;
 
 import java.util.ArrayList;
+<<<<<<< Updated upstream
+=======
+import java.util.Arrays;
+>>>>>>> Stashed changes
 
 public class Circus {
     private static Animal[] animals = {
@@ -46,6 +50,7 @@ public class Circus {
         makeAnimalsTalk();
         System.out.println("Total value of equipments " + calculateValue(equipments));
         System.out.println("Total value of animals " + calculateValue(animals));
+<<<<<<< Updated upstream
         Cage<Duck> duckCage = new Cage<>();
         Duck duck = new Duck();
         duckCage.lockUp(duck);
@@ -60,5 +65,24 @@ public class Circus {
         for(Cage c: cages) {
             c.release();
         }
+=======
+
+        ArrayList<Animal> animalArrayList = new ArrayList<>(Arrays.asList(animals));
+
+        animalArrayList.add(new Duck("Goose"));
+        animalArrayList.add(new Parrot("Dolly"));
+
+        Duck louie = new Duck("Louie");
+        animalArrayList.add(louie);
+
+        for (Animal a: animalArrayList) {
+            System.out.println(a);
+        }
+
+        System.out.println("Number of animals: " + animalArrayList.size());
+        System.out.println("Index of Louie: " + animalArrayList.indexOf(louie));
+        animalArrayList.remove(louie);
+        System.out.println("Index of Louie: " + animalArrayList.indexOf(louie));
+>>>>>>> Stashed changes
     }
 }
